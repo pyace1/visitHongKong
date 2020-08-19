@@ -3,9 +3,26 @@
     margin:0;
     padding:0;
 }
-body{
+/*body{
     background-image:url(pexels-aleksandar-tomovic-5100182.jpg);
-}
+    background-size:cover;
+    
+}*/
+
+    /*CSS trik sa pseudo elementom da bi se napravila providna pozadina sa slikom*/
+
+body::after {
+    content: "";
+    background: url(pexels-aleksandar-tomovic-5100182.jpg);
+    background-size:cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
 body h1{
     font-family: 'Roboto', sans-serif;
 }
@@ -21,17 +38,19 @@ header h1 span{
 .container{
     width:70%;
     margin:auto;
-    background:lightgray;
-    
+    border:1px dotted aquamarine;
+    text-align: center;    
 }
 .row{
     display:flex;
     justify-content: space-between;
 }
 .članak{
-    border:1px solid red;
+    border:1px solid aquamarine;
     padding:30px;
     flex:0 0 17%;
+    background-size: cover;
+    background-position: center;
 }
 .tramvaj{
     background-image: url(pexels-aleksandar-tomovic-5100198.jpg);
@@ -39,9 +58,19 @@ header h1 span{
 .grafiti{
     background-image: url(pexels-aleksandar-tomovic-5100190.jpg);
 }
-
+.lunapark{
+    background-image: url(pexels-aleksandar-tomovic-5100186.jpg);
+}
+.brod{
+    background-image: url(pexels-aleksandar-tomovic-5131005.jpg);
+}
 footer{
     text-align: center;
+}
+footer hr{
+    height:1px;
+    background-color:aquamarine;
+    border:none;
 }
 footer h2 sub{
     font-family: 'Liu Jian Mao Cao', cursive;
